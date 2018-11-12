@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/getComments','CommentsController@getComments'); //get last 5 comments from database
+Route::post('/addComments','CommentsController@addComments'); // add new comments to database
+Route::get('/updateComments','CommentsController@updateComments'); // updata notification if its seen by user
+Route::get('/postComment','CommentsController@postComment'); // return post comment view
